@@ -1,6 +1,6 @@
 package lab3_davidreyes_victorcruz;
 import java.util.ArrayList;
-public class Marcas {
+public class Marcas  {
     ArrayList<marcas_autos> lista;
 
     public Marcas(ArrayList<marcas_autos> lista) {
@@ -9,6 +9,10 @@ public class Marcas {
 
     public Marcas() {
     }
+
+   
+    
+   
 
     public ArrayList<marcas_autos> getLista() {
         return lista;

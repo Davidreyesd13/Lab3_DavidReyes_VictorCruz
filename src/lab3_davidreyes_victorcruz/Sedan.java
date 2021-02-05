@@ -5,16 +5,16 @@ import java.util.ArrayList;
 public class Sedan extends carroceria{
     boolean androidplay;
     boolean androidauto;
-    int cantasis;
-
+    ArrayList<String> tipoasis;
+    
     public Sedan() {
     }
 
-    public Sedan(boolean androidplay, boolean androidauto, int cantasis, ArrayList<Hatchback> hatchbacks, ArrayList<SUV> suvs, ArrayList<Sedan> sedans) {
+    public Sedan(boolean androidplay, boolean androidauto,ArrayList tipoasis , ArrayList<Hatchback> hatchbacks, ArrayList<SUV> suvs, ArrayList<Sedan> sedans) {
         super(hatchbacks, suvs, sedans);
         this.androidplay = androidplay;
         this.androidauto = androidauto;
-        this.cantasis = cantasis;
+        this.tipoasis = tipoasis;
     }
 
     public boolean isAndroidplay() {
@@ -33,17 +33,17 @@ public class Sedan extends carroceria{
         this.androidauto = androidauto;
     }
 
-    public int getCantasis() {
-        return cantasis;
+    public ArrayList getCantasis() {
+        return tipoasis;
     }
 
-    public void setCantasis(int cantasis) {
-        this.cantasis = cantasis;
+    public void setCantasis(ArrayList  tipoasis) {
+        this.tipoasis = tipoasis;
     }
 
     @Override
     public String toString() {
-        return "Sedan{" + "androidplay=" + androidplay + ", androidauto=" + androidauto + ", cantasis=" + cantasis + '}';
+        return "Sedan{" + "androidplay=" + androidplay + ", androidauto=" + androidauto + ", cantasis=" + tipoasis + '}';
     }
     
 }

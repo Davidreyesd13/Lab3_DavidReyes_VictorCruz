@@ -1,9 +1,9 @@
 package lab3_davidreyes_victorcruz;
 import java.util.ArrayList;
-public class fabricas extends coorporaciones{
+public class fabricas {
     String nombrefab;
     String ubicacion;
-    int cantm;
+    int cantmax;
     String tipoc;
     int cantempleados;
     ArrayList<Marcas> nombrefabricas;
@@ -12,11 +12,11 @@ public class fabricas extends coorporaciones{
     public fabricas() {
     }
 
-    public fabricas(String nombrefab, String ubicacion, int cantm, String tipoc, int cantempleados, ArrayList<Marcas> nombrefabricas, int autos_fab, String nombre, String sede, int año, String ceo, int empleados, int autos, ArrayList marcas) {
-        super(nombre, sede, año, ceo, empleados, autos, marcas);
+    public fabricas(String nombrefab, String ubicacion, int cantmax, String tipoc, int cantempleados, ArrayList<Marcas> nombrefabricas, int autos_fab, String nombre, String sede, int año, String ceo, int empleados, int autos, ArrayList marcas) {
+       
         this.nombrefab = nombrefab;
         this.ubicacion = ubicacion;
-        this.cantm = cantm;
+        this.cantmax = cantmax;
         this.tipoc = tipoc;
         this.cantempleados = cantempleados;
         this.nombrefabricas = nombrefabricas;
@@ -26,11 +26,11 @@ public class fabricas extends coorporaciones{
 
 
     public String getNombrefab() {
-        return nombre;
+        return nombrefab;
     }
 
     public void setNombrefab(String nombre) {
-        this.nombre = nombre;
+        this.nombrefab = nombre;
     }
 
     public String getUbicacion() {
@@ -42,11 +42,11 @@ public class fabricas extends coorporaciones{
     }
 
     public int getCantm() {
-        return cantm;
+        return cantmax;
     }
 
     public void setCantm(int cantm) {
-        this.cantm = cantm;
+        this.cantmax = cantm;
     }
 
     public String getTipoc() {
@@ -83,7 +83,7 @@ public class fabricas extends coorporaciones{
 
     @Override
     public String toString() {
-        return "fabricas{" + "nombre=" + nombre + ", ubicacion=" + ubicacion + ", cantm=" + cantm + ", tipoc=" + tipoc + ", cantempleados=" + cantempleados + ", nombrefabricas=" + nombrefabricas + ", autos_fab=" + autos_fab + '}';
+        return "fabricas{" + "nombre=" + nombrefab + ", ubicacion=" + ubicacion + ", cantm=" + cantmax + ", tipoc=" + tipoc + ", cantempleados=" + cantempleados + ", nombrefabricas=" + nombrefabricas + ", autos_fab=" + autos_fab + '}';
     }
     
 }

@@ -2,14 +2,14 @@ package lab3_davidreyes_victorcruz;
 
 import java.util.ArrayList;
 
-public class mat_tec extends coorporaciones {
+public class mat_tec{
     String div_tec;
     int añocreacion;
     String campo;
     String tecdesa;
 
     public mat_tec(String div_tec, int añocreacion, String campo, String tecdesa, String nombre, String sede, int año, String ceo, int empleados, int autos, ArrayList marcas) {
-        super(nombre, sede, año, ceo, empleados, autos, marcas);
+       
         this.div_tec = div_tec;
         this.añocreacion = añocreacion;
         this.campo = campo;
