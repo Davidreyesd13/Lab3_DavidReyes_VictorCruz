@@ -6,16 +6,15 @@ public class mat_tec{
     String div_tec;
     int añocreacion;
     String campo;
-    String tecdesa;
+    ArrayList<String> tecdesa;
 
-    public mat_tec(String div_tec, int añocreacion, String campo, String tecdesa, String nombre, String sede, int año, String ceo, int empleados, int autos, ArrayList marcas) {
-       
+    public mat_tec(String div_tec, int añocreacion, String campo, ArrayList<String> tecdesa) {
         this.div_tec = div_tec;
         this.añocreacion = añocreacion;
         this.campo = campo;
         this.tecdesa = tecdesa;
     }
-
+ 
     public mat_tec() {
     }
 
@@ -43,13 +42,14 @@ public class mat_tec{
         this.campo = campo;
     }
 
-    public String getTecdesa() {
+    public ArrayList<String> getTecdesa() {
         return tecdesa;
     }
 
-    public void setTecdesa(String tecdesa) {
+    public void setTecdesa(ArrayList<String> tecdesa) {
         this.tecdesa = tecdesa;
     }
+
 
     @Override
     public String toString() {

@@ -6,14 +6,13 @@ public class fabricas {
     int cantmax;
     String tipoc;
     int cantempleados;
-    ArrayList<Marcas> nombrefabricas;
+    ArrayList nombrefabricas;
     int autos_fab;
 
     public fabricas() {
     }
 
-    public fabricas(String nombrefab, String ubicacion, int cantmax, String tipoc, int cantempleados, ArrayList<Marcas> nombrefabricas, int autos_fab, String nombre, String sede, int año, String ceo, int empleados, int autos, ArrayList marcas) {
-       
+    public fabricas(String nombrefab, String ubicacion, int cantmax, String tipoc, int cantempleados, ArrayList nombrefabricas, int autos_fab) {
         this.nombrefab = nombrefab;
         this.ubicacion = ubicacion;
         this.cantmax = cantmax;
@@ -23,6 +22,7 @@ public class fabricas {
         this.autos_fab = autos_fab;
     }
 
+ 
 
 
     public String getNombrefab() {
@@ -69,7 +69,7 @@ public class fabricas {
         return nombrefabricas;
     }
 
-    public void setNombrefabricas(ArrayList<Marcas> nombrefabricas) {
+    public void setNombrefabricas(ArrayList nombrefabricas) {
         this.nombrefabricas = nombrefabricas;
     }
 

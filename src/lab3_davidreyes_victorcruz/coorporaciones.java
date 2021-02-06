@@ -19,6 +19,15 @@ ArrayList<Marcas> marcas;
         this.marcas = marcas;
     }
 
+    public coorporaciones(String nombre, String sede, int año, String ceo, int empleados, int autos) {
+        this.nombre = nombre;
+        this.sede = sede;
+        this.año = año;
+        this.ceo = ceo;
+        this.empleados = empleados;
+        this.autos = autos;
+    }
+    
     public coorporaciones() {
     }
 

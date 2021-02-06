@@ -1,5 +1,7 @@
 package lab3_davidreyes_victorcruz;
 
+import java.util.ArrayList;
+
 public class marcas_autos extends Marcas {
 String nombre;
 String lema;
@@ -9,6 +11,18 @@ String fundador;
 double total;
 String ceo;
 int modelos;
+
+    public marcas_autos(String nombre, String lema, String fundacion, int integracion, String fundador, double total, String ceo, int modelos, ArrayList<marcas_autos> lista) {
+        super(lista);
+        this.nombre = nombre;
+        this.lema = lema;
+        this.fundacion = fundacion;
+        this.integracion = integracion;
+        this.fundador = fundador;
+        this.total = total;
+        this.ceo = ceo;
+        this.modelos = modelos;
+    }
 
     public marcas_autos(String nombre, String lema, String fundacion, int integracion, String fundador, double total, String ceo, int modelos) {
         this.nombre = nombre;
@@ -20,6 +34,8 @@ int modelos;
         this.ceo = ceo;
         this.modelos = modelos;
     }
+
+    
 
     public marcas_autos() {
     }

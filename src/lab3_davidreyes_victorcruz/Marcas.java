@@ -4,6 +4,7 @@ public class Marcas  {
     ArrayList<marcas_autos> lista;
 
     public Marcas(ArrayList<marcas_autos> lista) {
+       
         this.lista = lista;
     }
 

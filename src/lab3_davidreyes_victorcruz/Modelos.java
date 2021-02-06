@@ -23,6 +23,15 @@ public class Modelos extends marcas_autos{
         this.tecno = tecno;
     }
 
+    public Modelos(String nombreMol, int año_fab, String tipo_mot, String cil_mot, double precio, boolean tecno) {
+        this.nombreMol = nombreMol;
+        this.año_fab = año_fab;
+        this.tipo_mot = tipo_mot;
+        this.cil_mot = cil_mot;
+        this.precio = precio;
+        this.tecno = tecno;
+    }
+    
     public String getNombreMol() {
         return nombreMol;
     }
