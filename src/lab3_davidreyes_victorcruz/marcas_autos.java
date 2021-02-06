@@ -3,17 +3,18 @@ package lab3_davidreyes_victorcruz;
 import java.util.ArrayList;
 
 public class marcas_autos extends Marcas {
-String nombre;
-String lema;
-String fundacion;
-int integracion;
-String fundador;
-double total;
-String ceo;
-int modelos;
 
-    public marcas_autos(String nombre, String lema, String fundacion, int integracion, String fundador, double total, String ceo, int modelos, ArrayList<marcas_autos> lista) {
-        super(lista);
+    String nombre;
+    String lema;
+    String fundacion;
+    int integracion;
+    String fundador;
+    double total;
+    String ceo;
+    int modelos;
+    String tipomarca;
+
+    public marcas_autos(String nombre, String lema, String fundacion, int integracion, String fundador, double total, String ceo, int modelos, String tipomarca) {
         this.nombre = nombre;
         this.lema = lema;
         this.fundacion = fundacion;
@@ -22,20 +23,10 @@ int modelos;
         this.total = total;
         this.ceo = ceo;
         this.modelos = modelos;
+        this.tipomarca = tipomarca;
     }
 
-    public marcas_autos(String nombre, String lema, String fundacion, int integracion, String fundador, double total, String ceo, int modelos) {
-        this.nombre = nombre;
-        this.lema = lema;
-        this.fundacion = fundacion;
-        this.integracion = integracion;
-        this.fundador = fundador;
-        this.total = total;
-        this.ceo = ceo;
-        this.modelos = modelos;
-    }
 
-    
 
     public marcas_autos() {
     }
@@ -104,10 +95,19 @@ int modelos;
         this.modelos = modelos;
     }
 
-    @Override
-    public String toString() {
-        return "marcas_autos " + "nombre=" + nombre + ", lema=" + lema + ", fundacion=" + fundacion + ", integracion=" + integracion + ", fundador=" + fundador + ", total=" + total + ", ceo=" + ceo + ", modelos=" + modelos;
+    public String getTipomarca() {
+        return tipomarca;
     }
 
+    public void setTipomarca(String tipomarca) {
+        this.tipomarca = tipomarca;
+    }
+
+    
+    @Override
+    public String toString() {
+        return "marcas_autos " + "nombre=" + nombre + ", lema=" + lema + ", fundacion=" + fundacion + ", integracion=" + integracion + ", fundador=" + fundador + ", total=" + total + ", ceo=" + ceo + ", modelos=" + modelos+tipomarca;
+       
+        }
 
 }

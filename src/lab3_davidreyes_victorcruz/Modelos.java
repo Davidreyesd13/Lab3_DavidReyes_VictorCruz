@@ -13,16 +13,6 @@ public class Modelos extends marcas_autos{
     public Modelos() {
     }
 
-    public Modelos(String nombreMol, int año_fab, String tipo_mot, String cil_mot, double precio, boolean tecno, String nombre, String lema, String fundacion, int integracion, String fundador, double total, String ceo, int modelos) {
-        super(nombre, lema, fundacion, integracion, fundador, total, ceo, modelos);
-        this.nombre = nombre;
-        this.año_fab = año_fab;
-        this.tipo_mot = tipo_mot;
-        this.cil_mot = cil_mot;
-        this.precio = precio;
-        this.tecno = tecno;
-    }
-
     public Modelos(String nombreMol, int año_fab, String tipo_mot, String cil_mot, double precio, boolean tecno) {
         this.nombreMol = nombreMol;
         this.año_fab = año_fab;
@@ -31,7 +21,9 @@ public class Modelos extends marcas_autos{
         this.precio = precio;
         this.tecno = tecno;
     }
-    
+
+
+
     public String getNombreMol() {
         return nombreMol;
     }

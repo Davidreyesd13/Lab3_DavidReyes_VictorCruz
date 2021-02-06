@@ -34,7 +34,45 @@ public class Lab3_DavidReyes_VictorCruz {
                             int cantEmp = leer.nextInt();
                             System.out.println("Cantidad de autos en el inventario");
                             int cantc = leer.nextInt();
-                            coop.add(new coorporaciones(nombre, sede, año, np, año, cantc));
+                                System.out.println("Ingrese el nombre de la marca");
+                                leer.nextLine();
+                                nombre = leer.nextLine();
+                                System.out.println("Ingrese el lema");
+                                String lema = leer.nextLine();
+                                System.out.println("Ingrese el nombre de la fundacion");
+                                String fundacion = leer.nextLine();
+                                System.out.println("Ingrese el año que se integro");
+                                año = leer.nextInt();
+                                System.out.println("Ingrese el nombre del fundador");
+                                String fundador = leer.nextLine();
+                                System.out.println("Ingrese el total de ventas");
+                                double total = leer.nextInt();
+                                System.out.println("Ingrese el nombre del ceo / presidente");
+                                leer.nextLine();
+                                String ceo = leer.nextLine();
+                                System.out.println("Cantidad de modelos");
+                                int cantMo = leer.nextInt();
+                                System.out.println("tipo de marca\n1.Premium\n2.Generalista");
+                                int op2 = leer.nextInt();
+                                String tipomarca;
+                                ArrayList<marcas_autos> mar = new ArrayList();
+                                switch (op2) {
+                                    case 1:
+                                        tipomarca = "Premium";
+                                        mar.add(new marcas_autos(nombre, lema, fundacion, año, fundador, total, ceo, cantMo,tipomarca));
+                                        marca.add(new Marcas(mar));
+                                        general.add(marca);
+                                        break;
+                                    case 2:
+                                        tipomarca = "Generlista";
+                                       mar.add(new marcas_autos(nombre, lema, fundacion, año, fundador, total, ceo, cantMo,tipomarca));
+                                        marca.add(new Marcas(mar));
+                                        general.add(marca);
+                                        break;
+                                    default:
+                                        System.out.println("Opcion no valida");
+                                }
+                            coop.add(new coorporaciones(nombre, sede, año, ceo, año, año, marca));
                             general.add(coop);
                             break;
                         case 2:
@@ -58,110 +96,127 @@ public class Lab3_DavidReyes_VictorCruz {
                     }
                     break;
                 case 2:
-                    if (coop.size()==0) {
+                    if (coop.isEmpty()) {
                         System.out.println("Nel perron");
-                    }else{
-                    System.out.println("1.Crear\n2.Listar\n3.Modificar\n4.Eliminar");
-                    opc = leer.nextInt();
-                    switch (opc) {
-                        case 1:
-                            System.out.println("Ingrese el nombre de la marca");
-                            leer.nextLine();
-                            String nombre = leer.nextLine();
-                            System.out.println("Ingrese el lema");
-                            String lema = leer.nextLine();
-                            System.out.println("Ingrese el nombre de la fundacion");
-                            String fundacion = leer.nextLine();
-                            System.out.println("Ingrese el año que se integro");
-                            int año = leer.nextInt();
-                            System.out.println("Ingrese el nombre del fundador");
-                            String fundador = leer.nextLine();
-                            System.out.println("Ingrese el total de ventas");
-                            double total = leer.nextInt();
-                            System.out.println("Ingrese el nombre del ceo / presidente");
-                            leer.nextLine();
-                            String ceo = leer.nextLine();
-                            System.out.println("Cantidad de modelos");
-                            int cantMo = leer.nextInt();
-                            ArrayList<marcas_autos> mar = new ArrayList();
-                            mar.add(new marcas_autos(nombre, lema, fundacion, opcion, fundador, total, ceo, opcion));
-                            marca.add(new Marcas(mar));
-                            general.add(marca);
-                            break;
-                        case 2:
-                            for (Object o : marca) {
-                                System.out.println(marca.indexOf(o) + "-" + o + "\n");
-                            }
-                            break;
-                        case 3:
+                    } else {
+                        System.out.println("1.Crear\n2.Listar\n3.Modificar\n4.Eliminar");
+                        opc = leer.nextInt();
+                        switch (opc) {
+                            case 1:
+                                System.out.println("Ingrese el nombre de la marca");
+                                leer.nextLine();
+                                String nombre = leer.nextLine();
+                                System.out.println("Ingrese el lema");
+                                String lema = leer.nextLine();
+                                System.out.println("Ingrese el nombre de la fundacion");
+                                String fundacion = leer.nextLine();
+                                System.out.println("Ingrese el año que se integro");
+                                int año = leer.nextInt();
+                                System.out.println("Ingrese el nombre del fundador");
+                                String fundador = leer.nextLine();
+                                System.out.println("Ingrese el total de ventas");
+                                double total = leer.nextInt();
+                                System.out.println("Ingrese el nombre del ceo / presidente");
+                                leer.nextLine();
+                                String ceo = leer.nextLine();
+                                System.out.println("Cantidad de modelos");
+                                int cantMo = leer.nextInt();
+                                System.out.println("tipo de marca\n1.Premium\n2.Generalista");
+                                int op2 = leer.nextInt();
+                                String tipomarca;
+                                ArrayList<marcas_autos> mar = new ArrayList();
+                                switch (op2) {
+                                    case 1:
+                                        tipomarca = "Premium";
+                                        mar.add(new marcas_autos(nombre, lema, fundacion, año, fundador, total, ceo, cantMo,tipomarca));
+                                        marca.add(new Marcas(mar));
+                                        general.add(marca);
+                                        break;
+                                    case 2:
+                                        tipomarca = "Generlista";
+                                       mar.add(new marcas_autos(nombre, lema, fundacion, año, fundador, total, ceo, cantMo,tipomarca));
+                                        marca.add(new Marcas(mar));
+                                        general.add(marca);
+                                        break;
+                                    default:
+                                        System.out.println("Opcion no valida");
+                                }
+                                break;
+                            case 2:
+                                for (Object o : marca) {
+                                    System.out.println(marca.indexOf(o) + "-" + o + "\n");
+                                }
+                                break;
+                            case 3:
 
-                            break;
-                        case 4:
-                            for (Object o : marca) {
-                                System.out.println(marca.indexOf(o) + "-" + o + "\n");
-                            }
-                            System.out.println("Que numero desea Eliminar");
-                            int ne = leer.nextInt();
-                            marca.remove(ne);
-                            break;
-                        default:
-                            System.out.println("opcion no valida");
-                    }
+                                break;
+                            case 4:
+                                for (Object o : marca) {
+                                    System.out.println(marca.indexOf(o) + "-" + o + "\n");
+                                }
+                                System.out.println("Que numero desea Eliminar");
+                                int ne = leer.nextInt();
+                                marca.remove(ne);
+                                break;
+                            default:
+                                System.out.println("opcion no valida");
+                        }
                     }
                     break;
                 case 3:
-                    if (marca.size()==0&& coop.size()==0) {
+                    if (marca.isEmpty() && coop.isEmpty()) {
                         System.out.println("nel papu por ahi");
-                    }else{
-                    System.out.println("1.Crear\n2.Listar\n3.Modificar\n4.Eliminar");
-                    opc = leer.nextInt();
-                    switch (opc) {
-                        case 1:
-                            System.out.println("Ingrese el nombre del modelo");
-                            leer.nextLine();
-                            System.out.println("Ingrese el año que se creo");
-                            int año = leer.nextInt();
-                            String nombrem = leer.nextLine();
-                            System.out.println("Ingrese el tipo de motor");
-                            String motor = leer.nextLine();
-                            System.out.println("Ingrese el cilidraje");
-                            String np = leer.nextLine();
-                            System.out.println("Cantidad de empleados");
-                            int cantEmp = leer.nextInt();
-                            System.out.println("Ingrese el precio del modelo");
-                            double total = leer.nextInt();
-                            System.out.println("Tiene tecnologia");
-                            String tec = leer.next();
-                            tec = tec.toLowerCase();
-                            boolean respuesta;
-                            if (tec.equals("si")) {
-                                respuesta = true;
-                            } else {
-                                respuesta = false;
-                            }
+                    } else {
+                        System.out.println("1.Crear\n2.Listar\n3.Modificar\n4.Eliminar");
+                        opc = leer.nextInt();
+                        switch (opc) {
+                            case 1:
+                                System.out.println("Ingrese el nombre del modelo");
+                                leer.nextLine();
+                                System.out.println("Ingrese el año que se creo");
+                                int año = leer.nextInt();
+                                String nombrem = leer.nextLine();
+                                System.out.println("Ingrese el tipo de motor");
+                                String motor = leer.nextLine();
+                                System.out.println("Ingrese el cilidraje");
+                                String np = leer.nextLine();
+                                System.out.println("Cantidad de empleados");
+                                int cantEmp = leer.nextInt();
+                                System.out.println("Ingrese el precio del modelo");
+                                double total = leer.nextInt();
+                                System.out.println("Tiene tecnologia");
+                                String tec = leer.next();
+                                tec = tec.toLowerCase();
+                                boolean respuesta;
+                                if (tec.equals("si")) {
+                                    respuesta = true;
+                                } else {
+                                    respuesta = false;
+                                }
+                                System.out.println("");
+                                Modelos.add(new Modelos(nombrem, año, motor, motor, total, respuesta));
+                                general.add(Modelos);
+                                break;
+                            case 2:
+                                for (Object o : Modelos) {
+                                    System.out.println(Modelos.indexOf(o) + "-" + o + "\n");
+                                }
+                                break;
+                            case 3:
 
-                            Modelos.add(new Modelos(nombrem, año, motor, motor, total, respuesta));
-                            general.add(Modelos);
-                            break;
-                        case 2:
-                            for (Object o : Modelos) {
-                                System.out.println(Modelos.indexOf(o) + "-" + o + "\n");
-                            }
-                            break;
-                        case 3:
-
-                            break;
-                        case 4:
-                            for (Object o : Modelos) {
-                                System.out.println(Modelos.indexOf(o) + "-" + o + "\n");
-                            }
-                            System.out.println("Que numero desea Eliminar");
-                            int ne = leer.nextInt();
-                            Modelos.remove(ne);
-                            break;
-                        default:
-                            System.out.println("opcion no valida");
-                    }}
+                                break;
+                            case 4:
+                                for (Object o : Modelos) {
+                                    System.out.println(Modelos.indexOf(o) + "-" + o + "\n");
+                                }
+                                System.out.println("Que numero desea Eliminar");
+                                int ne = leer.nextInt();
+                                Modelos.remove(ne);
+                                break;
+                            default:
+                                System.out.println("opcion no valida");
+                        }
+                    }
                     break;
                 case 4:
                     System.out.println("1.Crear\n2.Listar\n3.Modificar\n4.Eliminar");
@@ -229,22 +284,35 @@ public class Lab3_DavidReyes_VictorCruz {
                             System.out.println("Año de creacion");
                             int acrecion = leer.nextInt();
                             System.out.println("Ingrese el campo que se dedica");
+                            leer.nextLine();
                             String campo = leer.nextLine();
                             ArrayList<String> prototipos = new ArrayList();
                             boolean s = true;
                             char resp3 = 's';
                             while (s == true) {
-                            System.out.println("Ingrese las tecnologias creadas");
-                            String nombrept= leer.nextLine();
-                            prototipos.add(nombrept);
+                                System.out.println("Ingrese las tecnologias creadas");
+                                String nombrept = leer.nextLine();
+                                prototipos.add(nombrept);
                                 System.out.println("Desea Continuar?[s/n]");
-                               resp3 = leer.next().charAt(0);
-                                if (resp3 == 's' ) {
+                                resp3 = leer.next().charAt(0);
+                                if (resp3 == 's') {
                                     s = true;
-                                }else{
-                                    s=false;
+                                } else {
+                                    s = false;
                                 }//fin  del if
                             }//fin del whileres
+                            if (!marca.isEmpty()) {
+                            for (Object o : marca) {
+                                System.out.println(marca.indexOf(o) + "-" + o + "\n");
+                            }
+                            System.out.println("Ingrese el numero que desea ver si es premium o generalista");
+                            int numtm = leer.nextInt();
+                            if(numtm ==1){
+                                System.out.println("Su precio aumenta un 20%");
+                            }else{
+                                System.out.println("Su precio aumenta un 15%");
+                            }
+                            }
                             Div_tec.add(new mat_tec(nombre, acrecion, campo, prototipos));
                             general.add(Div_tec);
                             break;
@@ -280,8 +348,8 @@ public class Lab3_DavidReyes_VictorCruz {
                     System.out.println("Opcion no valida");
                     break;
             }
-            }
-            System.out.println("Desea continuar s/n");
-            resp = leer.next().charAt(0);
         }
+        System.out.println("Desea continuar s/n");
+        resp = leer.next().charAt(0);
     }
+}

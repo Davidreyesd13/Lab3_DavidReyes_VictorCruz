@@ -5,12 +5,13 @@ public class Premium extends marcas_autos{
     String div_dep;
     String tipocarroceria;
 
-    public Premium(String div_lujo, String div_dep, String tipocarroceria, String nombre, String lema, String fundacion, int integracion, String fundador, double total, String ceo, int modelos) {
-        super(nombre, lema, fundacion, integracion, fundador, total, ceo, modelos);
+    public Premium(String div_lujo, String div_dep, String tipocarroceria) {
         this.div_lujo = div_lujo;
         this.div_dep = div_dep;
         this.tipocarroceria = tipocarroceria;
     }
+
+
 
     public Premium() {
     }

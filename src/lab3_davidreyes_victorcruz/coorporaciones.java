@@ -89,7 +89,7 @@ ArrayList<Marcas> marcas;
 
     @Override
     public String toString() {
-        return "coorporaciones " + "nombre=" + nombre + ", sede=" + sede + ", a\u00f1o=" + año + ", ceo=" + ceo + ", empleados=" + empleados + ", autos=" + autos + ", marcas=" + marcas ;
+        return "coorporacion " + "nombre=" + nombre + ", sede=" + sede + ", a\u00f1o=" + año + ", ceo=" + ceo + ", empleados=" + empleados + ", autos=" + autos + ", marcas=" + marcas ;
     }
 
 
